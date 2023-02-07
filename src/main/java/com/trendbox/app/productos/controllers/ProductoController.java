@@ -28,7 +28,7 @@ public class ProductoController {
 	private IProductoService productoService;
 	
 	@GetMapping("/productos")
-	public List<Producto> listar()
+	public List<Producto> getAll()
 	{
 		return productoService.findAll().stream().map(producto ->{
 			//producto.setPort(Integer.parseInt(env.getProperty("local.server.port")));
@@ -38,7 +38,7 @@ public class ProductoController {
 	}
 	
 	@GetMapping("/producto/{id}")
-	public Producto detalle(@PathVariable Long id) 
+	public Producto findByID(@PathVariable Long id) 
 	{
 		Producto producto = productoService.findById(id);
 		//producto.setPort(Integer.parseInt(env.getProperty("local.server.port")));
@@ -49,7 +49,6 @@ public class ProductoController {
 		} 
 		catch (InterruptedException e) 
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
 		return producto;
