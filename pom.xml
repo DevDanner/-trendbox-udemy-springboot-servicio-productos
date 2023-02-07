@@ -48,6 +48,15 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		
+		<!-- ****** Se agregan librerias de SWAGGER ****** -->
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-boot-starter</artifactId>
+		    <version>3.0.0</version>
+		</dependency>
+		<!-- ****** Se agregan librerias de SWAGGER ****** -->
+				
 	</dependencies>
 
 	<build>
